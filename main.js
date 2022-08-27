@@ -33,22 +33,26 @@ function my_keydown(e)
 		console.log("alphabet key");
 		}
 
-	if((keyPressed >=48 && keyPressed<=57)){
+		else if((keyPressed >=48 && keyPressed<=57)){
 		numberkey();
 		document.getElementById("d1").innerHTML="You Pressed Number Key";
 		console.log("numeric key");
 		}
 
-	if((keyPressed >=37 && keyPressed<=40)){
+		else if((keyPressed >=37 && keyPressed<=40)){
 		arrowkey();
 		document.getElementById("d1").innerHTML="You Pressed Arrow Key";
 		console.log("arrow key");
 		}
 
-	if((keyPressed >=17 && keyPressed<=17) || (keyPressed >=18 && keyPressed<=18) || (keyPressed >=27 && keyPressed<=27)){
+		else if((keyPressed >=17 && keyPressed<=17) || (keyPressed >=18 && keyPressed<=18) || (keyPressed >=27 && keyPressed<=27)){
 		specialkey();
 		document.getElementById("d1").innerHTML="You Pressed Special Key";
 		console.log("special key");
+		}
+		else{
+			otherkey()
+			document.getElementById("d1").innerHTML="You Pressed Other Key";
 		}
 }
 
